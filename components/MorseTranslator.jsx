@@ -160,7 +160,7 @@ export const MorseTranslator = () => {
                     <h4 className="text-center text-3xl md:text-4xl text-gray-200 dark:text-gray-900">Alfabeto del código Morse</h4>
 
                     <h6 className="text-center text-xl md:text-2xl text-gray-300 dark:text-slate-800 mt-4 mb-3">Letras</h6>
-                    <table className="w-full text-sm text-left text-gray-500 dark:text-slate-800 rounded-md overflow-clip">
+                    <table className="w-full md:w-[85%] md:mx-auto text-sm text-left text-gray-500 dark:text-slate-800 rounded-md overflow-clip">
                         <tbody className="text-xs text-gray-400 uppercase bg-gray-700 dark:bg-slate-400 dark:text-slate-700 rounded-md">
                             <tr className="border-b bg-gray-800 dark:bg-slate-500">
                                 <td className="tableItem">A</td>
@@ -172,7 +172,7 @@ export const MorseTranslator = () => {
                                 <td className="tableItem">S</td>
                                 <td className="tableItem">{MORSE_CODE.S}</td>
                                 <td className="tableItem">Y</td>
-                                <td className="tableItem">{MORSE_CODE.Y}</td>
+                                <td className="tableItem text-lg">{MORSE_CODE.Y}</td>
                             </tr>
                             <tr>
                                 <td className="tableItem">B</td>

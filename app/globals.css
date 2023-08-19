@@ -27,5 +27,5 @@ body {
 }
 
 .tableItem {
-  @apply md:px-5 px-2 py-2 md:py-4 border border-gray-600 dark:border-gray-300
+  @apply md:px-5 px-2 py-2 md:py-4 border border-gray-600 dark:border-gray-300 tracking-widest
 }
