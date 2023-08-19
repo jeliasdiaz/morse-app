@@ -133,7 +133,7 @@ export const MorseTranslator = () => {
         <div className="mb-5">
             <div className="mt-4 mb-4">
                 <div className="flex gap-4 mt-3 mb-3 justify-center">
-                    <div className="md:first-letter:flex gap-3 p-6">
+                    <div className="md:flex gap-3 p-6">
                         <div>
                             <div className="flex">
                                 <h5 className="mb-2 text-lg font-sans font-semibold">{textToMorse ? "Texto" : "Morse"}</h5>
