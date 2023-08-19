@@ -3,29 +3,29 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 3, 7, 18;
-  --background-start-rgb: 3, 7, 18;
-  --background-end-rgb: 3, 7, 18;
+  --foreground-rgb: 0, 0, 0;
+  --background-normal-rgb: 3, 7, 18;
+  --background-dark-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 225;
-    --background-start-rgb: 203, 213, 225;
-    --background-end-rgb: 203, 213, 225;
+    --foreground-rgb: 255, 255, 255;
+    --background-normal-rgb: 255, 255, 255;
+    --background-dark-rgb: 0, 0, 0;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    to bottom,
+    transparent,
+    rgb(var(--background-dark-rgb))
+  ) rgb(var(--background-normal-rgb));
+  overscroll-behavior-y: none; /* Prevent overscroll background color */
 }
 
 .tableItem {
-  @apply md:px-5 px-2 py-2 md:py-4 border border-gray-600 dark:border-gray-300
+  @apply md:px-5 px-2 py-2 md:py-4 border border-gray-600 dark:border-gray-300;
 }
