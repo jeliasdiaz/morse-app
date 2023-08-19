@@ -133,17 +133,17 @@ export const MorseTranslator = () => {
         <div className="mb-5">
             <div className="mt-4 mb-4">
                 <div className="flex gap-4 mt-3 mb-3 justify-center">
-                    <div className="flex gap-3">
+                    <div className="md:first-letter:flex gap-3 p-6">
                         <div>
                             <div className="flex">
                                 <h5 className="mb-2 text-lg font-sans font-semibold">{textToMorse ? "Texto" : "Morse"}</h5>
                                 <MdContentCopy className="ms-auto hover:bg-gray-700/50 p-1.5 rounded-md" onClick={copyToClipboardLeft} size={30} cursor="pointer" />
 
                             </div>
-                            <textarea type="text" className="w-[28rem] h-64 p-4 rounded bg-gray-800" onChange={textToMorse ? (e) => onText(e) : (e) => onMorse(e)} value={textToMorse ? text : morse}></textarea>
+                            <textarea type="text" className="w-80 md:w-[28rem] h-64 p-4 rounded bg-gray-800" onChange={textToMorse ? (e) => onText(e) : (e) => onMorse(e)} value={textToMorse ? text : morse}></textarea>
                         </div>
 
-                        <BsArrowLeftRight onClick={switchMorse} size={30} cursor="pointer" className="hover:bg-gray-700/50 p-1.5 rounded-md"/>
+                        <BsArrowLeftRight onClick={switchMorse} size={30} cursor="pointer" className="hover:bg-gray-700/50 p-1.5 rounded-md mx-auto md:mx-0 mt-2 md:mt-0" />
 
                         <div>
                             <div className="flex">
@@ -151,14 +151,14 @@ export const MorseTranslator = () => {
                                 <MdContentCopy className="ms-auto hover:bg-gray-700/50 p-1.5 rounded-md" onClick={copyToClipboardRight} size={30} cursor="pointer" />
 
                             </div>
-                            <textarea type="text" className="w-[28rem] h-64 p-4 rounded bg-gray-800" readOnly={true} value={textToMorse ? morse : text} ></textarea>
+                            <textarea type="text" className="w-80 md:w-[28rem] h-64 p-4 rounded bg-gray-800" readOnly={true} value={textToMorse ? morse : text} ></textarea>
                         </div>
                     </div>
                 </div>
 
-                <h4 className="text-center text-4xl text-gray-200">Alfabeto del código Morse</h4>
+                <h4 className="text-center text-3xl md:text-4xl text-gray-200">Alfabeto del código Morse</h4>
 
-                <h6 className="text-center text-2xl text-gray-300 mt-4 mb-3">Letras</h6>
+                <h6 className="text-center text-xl md:text-2xl text-gray-300 mt-4 mb-3">Letras</h6>
                 <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 rounded-md">
                     <tbody className="text-xs text-gray-700 uppercase bg-gray-700 dark:text-gray-400 rounded-md">
                         <tr className="border-b bg-gray-800 border-gray-700">
@@ -232,111 +232,111 @@ export const MorseTranslator = () => {
                     </tbody>
                 </table>
 
-                <div className="flex justify-around">
-                <div>
-                <h6 className="text-center text-2xl text-gray-300 mt-4 mb-3">Números</h6>
-                <table className="w-96  text-sm text-left text-gray-500 dark:text-gray-400 rounded-md">
-                    <tbody className="text-xs text-gray-700 uppercase bg-gray-700 dark:text-gray-400 rounded-md">
-                        <tr className="border-b bg-gray-800 border-gray-700 ">
-                            <td className="tableItem rounded-ss-md">0</td>
-                            <td className="tableItem">{MORSE_CODE[0]}</td>
-                            <td className="tableItem">6</td>
-                            <td className="tableItem">{MORSE_CODE[6]}</td>
-                        </tr>
-                        <tr>
-                            <td className="tableItem">1</td>
-                            <td className="tableItem">{MORSE_CODE[1]}</td>
-                            <td className="tableItem">7</td>
-                            <td className="tableItem">{MORSE_CODE[7]}</td>
-                        </tr>
-                        <tr className="border-b bg-gray-800 border-gray-700">
-                            <td className="tableItem">2</td>
-                            <td className="tableItem">{MORSE_CODE[2]}</td>
-                            <td className="tableItem">8</td>
-                            <td className="tableItem">{MORSE_CODE[8]}</td>
-                        </tr>
-                        <tr>
-                            <td className="tableItem">3</td>
-                            <td className="tableItem">{MORSE_CODE[3]}</td>
-                            <td className="tableItem">9</td>
-                            <td className="tableItem">{MORSE_CODE[9]}</td>
-                        </tr>
-                        <tr className="border-b bg-gray-800 border-gray-700">
-                            <td className="tableItem">4</td>
-                            <td className="tableItem">{MORSE_CODE[4]}</td>
-                            <td colSpan={2} className="tableItem"></td>
-                        </tr>
-                        <tr>
-                            <td className="tableItem">5</td>
-                            <td className="tableItem">{MORSE_CODE[5]}</td>
-                            <td colSpan={2} className="tableItem rounded-ee-md"></td>
-                        </tr>
-                    </tbody>
-                </table>
-                </div>
+                <div className="md:flex justify-around">
+                    <div>
+                        <h6 className="text-center text-xl md:text-2xl text-gray-300 mt-4 mb-3">Números</h6>
+                        <table className="w-full md:w-96  text-sm text-left text-gray-500 dark:text-gray-400 rounded-md">
+                            <tbody className="text-xs text-gray-700 uppercase bg-gray-700 dark:text-gray-400 rounded-md">
+                                <tr className="border-b bg-gray-800 border-gray-700 ">
+                                    <td className="tableItem rounded-ss-md">0</td>
+                                    <td className="tableItem">{MORSE_CODE[0]}</td>
+                                    <td className="tableItem">6</td>
+                                    <td className="tableItem">{MORSE_CODE[6]}</td>
+                                </tr>
+                                <tr>
+                                    <td className="tableItem">1</td>
+                                    <td className="tableItem">{MORSE_CODE[1]}</td>
+                                    <td className="tableItem">7</td>
+                                    <td className="tableItem">{MORSE_CODE[7]}</td>
+                                </tr>
+                                <tr className="border-b bg-gray-800 border-gray-700">
+                                    <td className="tableItem">2</td>
+                                    <td className="tableItem">{MORSE_CODE[2]}</td>
+                                    <td className="tableItem">8</td>
+                                    <td className="tableItem">{MORSE_CODE[8]}</td>
+                                </tr>
+                                <tr>
+                                    <td className="tableItem">3</td>
+                                    <td className="tableItem">{MORSE_CODE[3]}</td>
+                                    <td className="tableItem">9</td>
+                                    <td className="tableItem">{MORSE_CODE[9]}</td>
+                                </tr>
+                                <tr className="border-b bg-gray-800 border-gray-700">
+                                    <td className="tableItem">4</td>
+                                    <td className="tableItem">{MORSE_CODE[4]}</td>
+                                    <td colSpan={2} className="tableItem"></td>
+                                </tr>
+                                <tr>
+                                    <td className="tableItem">5</td>
+                                    <td className="tableItem">{MORSE_CODE[5]}</td>
+                                    <td colSpan={2} className="tableItem rounded-ee-md"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-                <div>
-                <h6 className="text-center text-2xl text-gray-300 mt-4 mb-3">Puntuación</h6>
-                <table className="w-96  text-sm text-left text-gray-500 dark:text-gray-400 rounded-md">
-                    <tbody className="text-xs text-gray-700 uppercase bg-gray-700 dark:text-gray-400 rounded-md">
-                        <tr className="border-b bg-gray-800 border-gray-700 ">
-                            <td className="tableItem">.</td>
-                            <td className="tableItem">{MORSE_CODE["."]}</td>
-                            <td className="tableItem">{"("}</td>
-                            <td className="tableItem">{MORSE_CODE["("]}</td>
-                            <td className="tableItem">+</td>
-                            <td className="tableItem">{MORSE_CODE["+"]}</td>
-                            <td className="tableItem">" "</td>
-                            <td className="tableItem">{MORSE_CODE[" "]}</td>
-                        </tr>
-                        <tr>
-                            <td className="tableItem">,</td>
-                            <td className="tableItem">{MORSE_CODE[","]}</td>
-                            <td className="tableItem">{")"}</td>
-                            <td className="tableItem">{MORSE_CODE[")"]}</td>
-                            <td className="tableItem">-</td>
-                            <td className="tableItem">{MORSE_CODE["-"]}</td>
-                            <td colSpan={2}></td>
-                        </tr>
-                        <tr className="border-b bg-gray-800 border-gray-700 ">
-                            <td className="tableItem">?</td>
-                            <td className="tableItem">{MORSE_CODE["?"]}</td>
-                            <td className="tableItem">&</td>
-                            <td className="tableItem">{MORSE_CODE["&"]}</td>
-                            <td className="tableItem">_</td>
-                            <td className="tableItem">{MORSE_CODE["_"]}</td>
-                            <td colSpan={2}></td>
-                        </tr>
-                        <tr>
-                            <td className="tableItem">'</td>
-                            <td className="tableItem">{MORSE_CODE["'"]}</td>
-                            <td className="tableItem">:</td>
-                            <td className="tableItem">{MORSE_CODE[":"]}</td>
-                            <td className="tableItem">"</td>
-                            <td className="tableItem">{MORSE_CODE["\""]}</td>
-                            <td colSpan={2}></td>
-                        </tr>
-                        <tr className="border-b bg-gray-800 border-gray-700 ">
-                            <td className="tableItem">!</td>
-                            <td className="tableItem">{MORSE_CODE["!"]}</td>
-                            <td className="tableItem">;</td>
-                            <td className="tableItem">{MORSE_CODE[";"]}</td>
-                            <td className="tableItem">$</td>
-                            <td className="tableItem">{MORSE_CODE["$"]}</td>
-                            <td colSpan={2}></td>
-                        </tr>
-                        <tr>
-                            <td className="tableItem">/</td>
-                            <td className="tableItem">{MORSE_CODE["/"]}</td>
-                            <td className="tableItem">=</td>
-                            <td className="tableItem">{MORSE_CODE["="]}</td>
-                            <td className="tableItem">@</td>
-                            <td className="tableItem">{MORSE_CODE["@"]}</td>
-                            <td colSpan={2}></td>
-                        </tr>
-                    </tbody>
-                </table>
-                </div>
+                    <div>
+                        <h6 className="text-center text-xl md:text-2xl text-gray-300 mt-4 mb-3">Puntuación</h6>
+                        <table className="w-full md:w-96 text-sm text-left text-gray-500 dark:text-gray-400 rounded-md">
+                            <tbody className="text-xs text-gray-700 uppercase bg-gray-700 dark:text-gray-400 rounded-md">
+                                <tr className="border-b bg-gray-800 border-gray-700 ">
+                                    <td className="tableItem">.</td>
+                                    <td className="tableItem">{MORSE_CODE["."]}</td>
+                                    <td className="tableItem">{"("}</td>
+                                    <td className="tableItem">{MORSE_CODE["("]}</td>
+                                    <td className="tableItem">+</td>
+                                    <td className="tableItem">{MORSE_CODE["+"]}</td>
+                                    <td className="tableItem">" "</td>
+                                    <td className="tableItem">{MORSE_CODE[" "]}</td>
+                                </tr>
+                                <tr>
+                                    <td className="tableItem">,</td>
+                                    <td className="tableItem">{MORSE_CODE[","]}</td>
+                                    <td className="tableItem">{")"}</td>
+                                    <td className="tableItem">{MORSE_CODE[")"]}</td>
+                                    <td className="tableItem">-</td>
+                                    <td className="tableItem">{MORSE_CODE["-"]}</td>
+                                    <td colSpan={2}></td>
+                                </tr>
+                                <tr className="border-b bg-gray-800 border-gray-700 ">
+                                    <td className="tableItem">?</td>
+                                    <td className="tableItem">{MORSE_CODE["?"]}</td>
+                                    <td className="tableItem">&</td>
+                                    <td className="tableItem">{MORSE_CODE["&"]}</td>
+                                    <td className="tableItem">_</td>
+                                    <td className="tableItem">{MORSE_CODE["_"]}</td>
+                                    <td colSpan={2}></td>
+                                </tr>
+                                <tr>
+                                    <td className="tableItem">'</td>
+                                    <td className="tableItem">{MORSE_CODE["'"]}</td>
+                                    <td className="tableItem">:</td>
+                                    <td className="tableItem">{MORSE_CODE[":"]}</td>
+                                    <td className="tableItem">"</td>
+                                    <td className="tableItem">{MORSE_CODE["\""]}</td>
+                                    <td colSpan={2}></td>
+                                </tr>
+                                <tr className="border-b bg-gray-800 border-gray-700 ">
+                                    <td className="tableItem">!</td>
+                                    <td className="tableItem">{MORSE_CODE["!"]}</td>
+                                    <td className="tableItem">;</td>
+                                    <td className="tableItem">{MORSE_CODE[";"]}</td>
+                                    <td className="tableItem">$</td>
+                                    <td className="tableItem">{MORSE_CODE["$"]}</td>
+                                    <td colSpan={2}></td>
+                                </tr>
+                                <tr>
+                                    <td className="tableItem">/</td>
+                                    <td className="tableItem">{MORSE_CODE["/"]}</td>
+                                    <td className="tableItem">=</td>
+                                    <td className="tableItem">{MORSE_CODE["="]}</td>
+                                    <td className="tableItem">@</td>
+                                    <td className="tableItem">{MORSE_CODE["@"]}</td>
+                                    <td colSpan={2}></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <br />
