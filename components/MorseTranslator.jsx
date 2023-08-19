@@ -157,7 +157,7 @@ export const MorseTranslator = () => {
                 </div>
 
                 <div>
-                    <h4 className="text-center text-3xl md:text-4xl text-gray-200 dark:text-gray-900">Alfabeto del código Morse</h4>
+                    <h4 className="text-center text-2xl md:text-3xl text-gray-200 dark:text-gray-900">Alfabeto del código Morse</h4>
 
                     <h6 className="text-center text-xl md:text-2xl text-gray-300 dark:text-slate-800 mt-4 mb-3">Letras</h6>
                     <table className="w-full md:w-[85%] md:mx-auto text-sm text-left text-gray-500 dark:text-slate-800 rounded-md overflow-clip">
